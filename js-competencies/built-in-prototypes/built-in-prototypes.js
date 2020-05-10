@@ -8,9 +8,11 @@
 //'...here be dragons' to the end of each element. 
 //dragonMapper should return the the new array. You should
 //use the built-in array method .map
-  
-  //Code here
 
+const dragonMapper = (arr) => {
+  const newArr = arr.map(element => element + '...here be dragons')
+  return newArr
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -19,9 +21,8 @@
 //in an array and filters out every object that
 //does NOT have the key favoriteCookie.
 //cookieLoversOnly should return the filtered array.
-  
-  //Code here
 
+const cookieLoversOnly = arr => arr.filter(e => e.favoriteCookie);    //NEED EXPLANATION PLEASE
 
 //////////////////PROBLEM 3////////////////////
 
@@ -34,8 +35,9 @@
 //Hint: there is an array method for this.
 
 
-  //Code here
-
+const changeValue = (arr, cb) => {
+  arr.forEach(element => cb(element))
+}
 
 
 //////////////////PROBLEM 4////////////////////
@@ -45,8 +47,8 @@
 //the elements (here the word product means the result 
 //of multiplying all the elements together)
 //Return the product.
-  
-  //Code here
+
+const findProduct = arr => arr.reduce((acc, element) => acc * element, 1)
 
 
 //////////////////PROBLEM 5////////////////////
@@ -63,8 +65,7 @@
 // character at index 2 of "wide": "d"
 // cipherize will return: "d"
 
-  //Code here
-
+const cipherize = (arr, str) => str.charAt(arr.indexOf(str))
 
 
 //////////////////PROBLEM 6////////////////////
@@ -74,4 +75,9 @@
 //string. Use built-in methods for taking the string 
 //apart, reversing it, and putting it back together again.
 
-  //Code here
+const reverseMe = str => {
+  var splitString = str.split("")
+  var reverseArray = splitString.reverse()
+  var joinArray = reverseArray.join("")
+  return joinArray
+}
